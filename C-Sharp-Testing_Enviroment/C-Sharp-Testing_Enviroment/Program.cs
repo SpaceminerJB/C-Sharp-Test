@@ -1,26 +1,31 @@
 ﻿using System;
 
+
 namespace C_Sharp_Testing_Enviroment
 {
     class Program
     {
         static void Main()
         {
-            int x = 5;
-            while (x == 5)
+            int Eingabe = 0;
+            while (Eingabe != 21)
             {
-                Alterseingabe();
+                Eingabe = AltersEingabe();
             }
+
+            Console.WriteLine("Glückwunsch, du hast mein Alter erraten");
             Console.ReadKey();
+           
 
         }
-        static void Alterseingabe()
+        static int AltersEingabe()       //Methode zur Alterseingabe
         {
-                string alter;
-                Console.Write("Bitte gib dein Alter ein: ");
-                alter = Console.ReadLine();
-                Console.WriteLine("Du bist " + alter + " Jahre alt.");
                 
+                Console.Write("Wie alt bin ich? ");
+                int alter = Convert.ToInt32(Console.ReadLine());
+            
+                return alter;
+            
         }
 
 
